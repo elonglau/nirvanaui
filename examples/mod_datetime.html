@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>datetime - 携程商旅无线V3.0</title>
+    <link rel="apple-touch-icon-precomposed" href="custom_icon.png">
+    <!-- nirvana -->
+    <link rel="stylesheet" href="../dist/css/nirvana.css" media="all"> <!-- 公用库 -->
+
+  </head>
+  <body>
+    <header class="">
+      <h1><span>选择日期</span></h1>      
+      <span class="nav-back"> <i class="icon-back"></i> </span>
+    </header>
+    
+    <!-- page slide container S -->
+    <section class="main">
+      <!-- single page -->
+      <article class="page" id="">
+        <div class="container">
+            
+            <div class="mod-datetime">
+              <div class="handle">
+                <h3>用车时间</h3>
+                <i id="datatimeClose" class="btn-x"></i>
+              </div>
+              <div class="content">
+                <dl class="list">
+                  <dt>日期</dt>
+                  <dd id="wrapper">
+                    <ul class="date-list">
+                      <li>2月12日  周一</li>
+                      <li>2月12日  周二</li>
+                      <li class="cur">2月12日  周三</li>
+                      <li>2月12日  周四</li>
+                      <li>2月12日  周五</li>
+                      <li>2月12日  周六</li>
+                    </ul>
+                  </dd>
+                </dl>
+                <dl class="list">
+                  <dt>时</dt>
+                  <dd>
+                    <ul class="date-list">
+                      <li>15</li>
+                      <li>16</li>
+                      <li class="cur">17</li>
+                      <li>18</li>
+                      <li>19</li>
+                      <li>20</li>
+                    </ul>
+                  </dd>
+                </dl>
+                <dl class="list">
+                  <dt>分</dt>
+                  <dd>
+                    <ul class="date-list">
+                      <li>--</li>
+                      <li>--</li>
+                      <li class="cur">00</li>
+                      <li>10</li>
+                      <li>30</li>
+                      <li>40</li>
+                      <li>50</li>
+                    </ul>
+                  </dd>
+                </dl>
+
+                <div class="mask-gray"></div>
+              </div>
+              <div class="button">
+                <input class="btn-secondary btn-lg" type="button" value="确定" />
+              </div>
+            </div>
+
+        </div>
+         
+      </article>
+    </section>
+    <!-- page slide container E -->
+
+    <!-- framework -->
+    <script type="text/javascript" src="../js/frame.min.js"></script>
+    <script text="text/javascript">
+        //get window height
+        //$("body").height($(window).height());
+
+        // page iscroll        
+        var myScroll;
+        function loaded() {
+          myScroll = new iScroll('wrapper');
+        }
+        document.addEventListener('DOMContentLoaded', loaded, false);
+
+    </script>
+    <!-- project script -->
+    <script type="text/javascript" src="../js/demo.js"></script>
+  </body>
+</html> 

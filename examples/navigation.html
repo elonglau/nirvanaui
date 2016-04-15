@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>navigation - 携程商旅无线V3.0</title>
+    <link rel="apple-touch-icon-precomposed" href="custom_icon.png">
+    <!-- nirvana -->
+    <link rel="stylesheet" href="../dist/css/nirvana.css" media="all"> <!-- 公用库 -->
+
+  </head>
+  <body>
+  <form action="#">    
+    
+    <!-- nav simple S -->
+    <header class="demonav">
+      <h1><span>携程企业商旅</span></h1>      
+      <span class="nav-back"> <i class="icon-back"></i> </span>
+      <span class="nav-home"> <i class="icon-home"></i> </span>
+    </header>
+    <!-- nav simple E -->
+
+    <!-- nav nohome S -->
+    <header class="demonav">
+      <h1><span>选择机场/火车站</span></h1>      
+      <span class="nav-back"> <i class="icon-back"></i> </span>
+      <!-- <span class="nav-home"> <i class="icon-home"></i> </span> -->
+    </header>
+    <!-- nav nohome E -->
+    
+    <!-- nav button S -->
+    <header class="demonav">
+      <h1 class="title-nav-multi"><span>上海浦东 - 香港</span><br/><em>共<i>86</i>个航班信息</em></h1>      
+      <span class="nav-back"> <i class="icon-back"></i> </span>
+      <span class="nav-home"> <i class="btn-nav-side">差旅标准</i> </span>
+    </header> 
+    <!-- nav button E -->
+
+    <!-- nav search S -->
+    <header class="demonav">
+      <h1><span>选择机场/火车站</span></h1>      
+      <span class="nav-back"> <i class="icon-back"></i> </span>
+      
+      <!-- search on : 打开状态，默认无 -->
+      <div class="search search-nav "> <input class="search-input" type="search" value="" />  <span class="icon-search"></span> </div>
+    </header>
+    <!-- nav search E -->
+
+    <!-- nav tab S -->
+    <header class="demonav">
+
+      <ul class="tab tab-primary tab-nav">
+          <li class="cur">机票</li>
+          <li>酒店</li>
+      </ul>    
+      <span class="nav-back"> <i class="icon-back"></i> </span>
+      <span class="nav-home"> <i class="btn-nav-side nav-confirm">完成</i> </span>
+
+      <div class="top-container top-search">
+          <div class="search search-mulit">  
+            <input class="search-input" type="search" value="" placeholder="请输入用户人姓名" />  
+            
+            <span class="btn-search-enter"></span>
+            <span class="btn-search-delete"></span>
+          </div>
+      </div>
+    </header>
+    <!-- nav tab E -->
+
+    <!-- page slide container S -->
+    <section class="main" style="display:none;">
+      <!-- single page -->
+      <article class="page">
+         <div class="container">
+            main flied content
+         </div>
+      </article>
+    </section>
+    <!-- page slide container E -->
+    
+
+    <footer style="display:none;"> fixed footer content </footer>
+
+
+    <!-- framework -->
+    <script type="text/javascript" src="../js/frame.min.js"></script>
+    <script text="text/javascript">
+        //get window height
+        $("body").height($(window).height());
+
+    </script>
+    <!-- project script -->
+    <script type="text/javascript" src="../js/demo.js"></script>
+  </form>
+  </body>
+</html> 

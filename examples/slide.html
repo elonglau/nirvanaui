@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>Slide - 携程商旅无线V3.0</title>
+    <link rel="apple-touch-icon-precomposed" href="custom_icon.png">
+    <!-- nirvana -->
+    <link rel="stylesheet" href="../dist/css/nirvana.css" media="all"> <!-- 公用库 -->
+
+  </head>
+  <body>
+    <header>
+      <h1><span>携程企业商旅</span></h1>      
+      <span class="nav-back" id="pageBack"> <i class="icon-back"></i> </span>
+      <span class="nav-home" id="pageHome"> <i class="icon-home"></i> </span>
+    </header>
+    
+    <!-- page slide container S -->
+    <section class="main">
+      <!-- page 1 -->
+      <article class="page" id="wrapper" style="-webkit-transform: translate3d(0%, 0px, 0px);">
+         <div class="container">
+            
+            <!-- 标题表单混合 -->
+            <div class="figure">
+                <h3 class="figure-caption">标题表单混合标题</h3>
+                <div class="grid">
+                   <div class="col-12"> <label>表单标题</label>  <i class="arr arr-r"></i> </div>
+                </div>
+                <div class="help-tips"> 提示帮助提示帮助提示帮助提示帮助提示帮助 </div>
+            </div>
+
+            <div class="figure">
+                <h3 class="figure-caption">两列标题表单混合标题1:2</h3>
+                <div class="figure-content">
+                    <div class="grid">
+                       <div class="col-4"> <label>表单标题六字</label> </div>
+                       <div class="col-8"> <span class="txt-figure">表单内容啊啊啊</span> </div>
+                    </div>
+                    <div class="grid">
+                       <div class="col-4"> <label>表单标题六字</label> </div>
+                       <div class="col-8"> 
+                          <span class="txt-figure txt-figure-center">表单内容啊啊啊</span>  
+                          <span class="txt-figure-right">中文描述</span>  
+                          <i class="arr arr-r"></i> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="help-tips"> 提示帮助提示帮助提示帮助提示帮助提示帮助 </div>
+            </div>
+            
+            <!-- 一列布局 -->
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-12"> <label>单行表单标题</label> <span class="txt-figure-right">中文描述</span>  <i class="arr arr-r"></i> </div>
+                </div>
+            </div> 
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-12"> <label>单行表单标题</label> <span class="txt-figure-right"> 共<span class="base-price price-sm"><dfn>&yen;</dfn> <b>265</b></span> </span> <i class="arr arr-r"></i> </div>
+                </div>
+            </div>
+            <!-- 两列布局 含表单元素 -->
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-4"> <label>单行表单标题</label></div>
+                  <div class="col-8"> 
+                      <input class="inner-control" type="text" value="不可编辑" placeholder="" readonly /> <!-- 只读状态添加readonly -->
+                  </div>
+                </div>
+            </div> 
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-4"> <label>单行表单标题</label></div>
+                  <div class="col-8"> 
+                      <input class="inner-control" type="text" value="" placeholder="please input your text..." />
+                  </div>
+                </div>
+            </div>  
+            <div class="figure">
+                <div class="grid row-select">
+                  <div class="col-4"> <label>单行表单标题</label></div>
+                  <div class="col-8"> 
+                      <span class="inner-control"> 模拟选择 </span>
+                      <i class="arr arr-r"></i>
+                  </div>
+                  <select class="">
+                      <option value="">select content</option>
+                      <option value="">select content</option>
+                      <option value="">select content</option>
+                      <option value="">select content</option>
+                  </select>
+                </div>
+            </div>
+            <!-- 乘机人模块 S -->
+            <div class="figure">
+              <div class="grid figure-passenger-title">
+                <div class="col-12"><label>乘机人</label> </div>
+              </div>
+
+              <div class="figure-content figure-passenger" style="height: 89px;">
+                <div class="grid">
+                  <div class="col-4">乘客一</div>
+                  <div class="col-8"><span class="txt-figure txt-figure-center">护照 <br/>1234567897784444 </span>  <i class="arr arr-r"></i></div>
+                </div>
+                <div class="grid">
+                  <div class="col-4">乘客二</div>
+                  <div class="col-8"><span class="txt-figure txt-figure-center">护照 <br/>1234567897784444 </span>  <i class="arr arr-r"></i></div>
+                </div>
+              </div>
+
+              <div class="grid">
+                <div class="col-12"> 
+                    <label>单行表单标题</label>
+                    <span class="txt-figure-right">中文描述</span>
+                    <i class="arr arr-r"></i>
+                </div>
+              </div>
+            </div>
+            <!-- 乘机人模块 E -->
+            <p class="button-panel"> <button class="btn-primary btn-lg" id="btnNext1">查询按钮</button> </p>
+         </div>
+      </article>
+      
+      <!-- page 2 -->
+      <article class="page" id="wrapper2" style="-webkit-transform: translate3d(100%, 0px, 0px);">
+          <div class="container">
+            <!-- 一列布局 -->
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-12"> <label>单行表单标题</label> <span class="txt-figure-right">中文描述</span>  <i class="arr arr-r"></i> </div>
+                </div>
+            </div> 
+            <!-- 两列布局 含表单元素 -->
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-4"> <label>单行表单标题</label></div>
+                  <div class="col-8"> 
+                      <input class="inner-control" type="text" value="不可编辑" placeholder="" readonly /> <!-- 只读状态添加readonly -->
+                  </div>
+                </div>
+            </div> 
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-4"> <label>单行表单标题</label></div>
+                  <div class="col-8"> 
+                      <input class="inner-control" type="text" value="" placeholder="please input your text..." />
+                  </div>
+                </div>
+            </div>  
+            <div class="figure">
+                <div class="grid row-select">
+                  <div class="col-4"> <label>单行表单标题</label></div>
+                  <div class="col-8"> 
+                      <span class="inner-control"> 模拟选择 </span>
+                      
+                      <i class="arr arr-r"></i>
+                  </div>
+                  <select class="">
+                      <option value="">select content</option>
+                      <option value="">select content</option>
+                      <option value="">select content</option>
+                      <option value="">select content</option>
+                  </select>
+                </div>
+            </div>
+            <p class="button-panel"> <button class="btn-primary btn-lg" id="btnNext2">查询按钮</button> </p>
+          </div>
+      </article>
+
+      <!-- page 3 -->
+      <article class="page" id="wrapper3" style="-webkit-transform: translate3d(100%, 0px, 0px);">
+          <div class="container">
+            <!-- 一列布局 -->
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-12"> <label>单行表单标题</label> <span class="txt-figure-right">中文描述</span>  <i class="arr arr-r"></i> </div>
+                </div>
+            </div> 
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-12"> <label>单行表单标题</label> <span class="txt-figure-right"> 共<span class="base-price price-sm"><dfn>&yen;</dfn> <b>265</b></span> </span> <i class="arr arr-r"></i> </div>
+                </div>
+            </div>
+            <!-- 两列布局 含表单元素 -->
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-4"> <label>单行表单标题</label></div>
+                  <div class="col-8"> 
+                      <input class="inner-control" type="text" value="不可编辑" placeholder="" readonly /> <!-- 只读状态添加readonly -->
+                  </div>
+                </div>
+            </div> 
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-4"> <label>单行表单标题</label></div>
+                  <div class="col-8"> 
+                      <input class="inner-control" type="text" value="" placeholder="please input your text..." />
+                  </div>
+                </div>
+            </div>  
+            <div class="figure">
+                <div class="grid row-select">
+                  <div class="col-4"> <label>单行表单标题</label></div>
+                  <div class="col-8"> 
+                      <span class="inner-control"> 模拟选择 </span>
+                      
+                      <i class="arr arr-r"></i>
+                  </div>
+                  <select class="">
+                      <option value="">select content</option>
+                      <option value="">select content</option>
+                      <option value="">select content</option>
+                      <option value="">select content</option>
+                  </select>
+                </div>
+            </div>
+            <!-- 标题表单混合 -->
+            <div class="figure">
+                <h3 class="figure-caption">标题表单混合标题</h3>
+                <div class="grid">
+                   <div class="col-12"> <label>表单标题</label>  <i class="arr arr-r"></i> </div>
+                </div>
+                <div class="help-tips"> 提示帮助提示帮助提示帮助提示帮助提示帮助 </div>
+            </div>
+          </div>
+      </article>
+
+    </section>
+    <!-- page slide container E -->
+    <footer> fixed footer content </footer>
+
+    <!-- framework -->
+    <script type="text/javascript" src="../js/frame.min.js"></script>
+    <script text="text/javascript">
+        //get window height
+        $("body").height($(window).height());
+
+        // page iscroll        
+        var myScroll;
+        function loaded() {
+          myScroll = new iScroll('wrapper');
+          myScroll = new iScroll('wrapper2');
+          myScroll = new iScroll('wrapper3');
+        }
+        document.addEventListener('DOMContentLoaded', loaded, false);
+
+        var btnNext1 = $('#btnNext1');
+        var btnNext2 = $('#btnNext2');
+        var pageBack = $('#pageBack');
+        var page1 = $('#wrapper');
+        var page2 = $('#wrapper2');
+        var page3 = $('#wrapper3');
+
+        //.slideSlow 慢速滑动，一定是左边的页面
+        //.slideFast 快速滑动，一定是右边的页面
+        //.slideSlowBack 返回时，慢速滑动，一定是左边的页面
+        //.slideFastBack 返回时，快速滑动，一定是右边的页面
+        //.pageInt  初始页面位置
+        //.pageOld  划过页面位置
+        //.pageNew  未滑页面位置
+
+        btnNext1.click(function(){
+            page1.css({'-webkit-transform' : 'translate3d(-100%, 0px, 0px)' , '-webkit-transition' : '-webkit-transform 500ms cubic-bezier(0.42, 0, 0.58, 1.0) 0.1s'});
+            page2.css({'-webkit-transform' : 'translate3d(0%, 0px, 0px)' , '-webkit-transition' : '-webkit-transform 350ms cubic-bezier(0.42, 0, 0.58, 1.0)'});
+        });
+
+        btnNext2.click(function(){
+            page2.css({'-webkit-transform' : 'translate3d(-100%, 0px, 0px)' , '-webkit-transition' : '-webkit-transform 500ms cubic-bezier(0.42, 0, 0.58, 1.0) 0.1s'});
+            page3.css({'-webkit-transform' : 'translate3d(0%, 0px, 0px)' , '-webkit-transition' : '-webkit-transform 350ms cubic-bezier(0.42, 0, 0.58, 1.0)'});
+        });
+        pageBack.click(function(){
+            page2.css({'-webkit-transform' : 'translate3d(0%, 0px, 0px)' , '-webkit-transition' : '-webkit-transform 500ms cubic-bezier(0.42, 0, 0.58, 1.0)'});
+            page3.css({'-webkit-transform' : 'translate3d(100%, 0px, 0px)' , '-webkit-transition' : '-webkit-transform 350ms cubic-bezier(0.42, 0, 0.58, 1.0) 0.1s'});
+        });
+    </script>
+    <!-- project script -->
+    <script type="text/javascript" src="../js/demo.js"></script>
+  </body>
+</html> 

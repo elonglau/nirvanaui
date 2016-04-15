@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+// Simplify & Modify for mobile browser only
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+// Address `[hidden]` styling not present in IE 8/9.
+// Hide the `template` element in IE, Safari, and Firefox < 22.
+
+[hidden], template {
+  display: none;
+}
+
+// Address styling not present in Safari 5 and Chrome.
+
+em, i, dfn {
+  font-style: normal;
+}
+
+// Address differences between Firefox and other browsers.
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+// Address inconsistent and variable font size in all browsers.
+
+small {
+  font-size: 80%;
+}
+
+// Prevent `sub` and `sup` affecting `line-height` in all browsers.
+
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+// Remove border when inside `a` element in IE 8/9.
+
+img {
+  border: 0;
+}
+
+// Define consistent border, margin, and padding.
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+// 1. Correct `color` not being inherited in IE 8/9.
+// 2. Remove padding so people aren't caught out if they zero out fieldsets.
+
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+// 1. Correct font family not being inherited in all browsers.
+// 2. Correct font size not being inherited in all browsers.
+// 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+
+button, input, select, textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  padding: 0;
+  /* 3 */
+}
+
+// Address Firefox 4+ setting `line-height` on `input` using `!important` in
+// the UA stylesheet.
+
+button, input {
+  line-height: normal;
+}
+
+// Address inconsistent `text-transform` inheritance for `button` and `select`.
+// All other form control elements do not inherit `text-transform` values.
+// Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+// Correct `select` style inheritance in Firefox 4+ and Opera.
+
+button, select {
+  text-transform: none;
+}
+
+//  Correct inability to style clickable `input` types in iOS.
+
+button, html input[type="button"] {
+  -webkit-appearance: none;
+}
+
+input {
+  &[type="reset"], &[type="submit"] {
+    -webkit-appearance: none;
+  }
+}
+
+// 1. Remove default vertical scrollbar in IE 8/9.
+// 2. Improve readability and alignment in all browsers.
+
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+// Remove most spacing between table cells.
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

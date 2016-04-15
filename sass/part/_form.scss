@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+//-----------------------------------------------------
+// form scss 
+//-----------------------------------------------------
+
+
+// forms mixin
+@mixin form_control_focus($color: $input_border_focus) {
+  // $color-rgba: rgba(red($color), green($color), blue($color), .6);
+  &:focus {
+    border-color: $color;
+    outline: 0;
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6));
+  }
+}
+@mixin inner_control($font_size_base, $font_color){
+  font-size: $font_size_base;
+  color: $font_color;
+}
+
+.form_control {
+  display: block;
+  width: 100%;
+
+}
+
+// 行内表单元素
+.inner-control{
+  display: block;
+  width: 100%;
+  padding: 0 25px 0 0;
+  border-width: 0;
+  line-height: 24px;
+  @extend %boxcontent;
+  @include inner_control(14px, #5679c2);
+  
+  &:focus{
+    outline: 0;
+  }
+
+  &[disabled],
+  &[readonly] {
+    color: $font-color-normal;
+    -webkit-user-select: none;
+    pointer-events: none;
+  }
+}
+
+// ---------------------------------grid form mix layout
+.col-select{ //模拟选择框
+  select {
+    position: absolute;
+    top: 0;    
+    display: block;    
+    height: 44px;       
+    background-color: transparent;
+  }
+
+  select {
+    left: 0;
+    width: 100%;
+    color: transparent; // not working in ie10
+    opacity: 0; // for ie10
+  }
+}
+
+.col_select,.col_select_full{ //真实选择框
+  height: 38px;
+
+  select{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+

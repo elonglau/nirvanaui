@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>Address - 携程商旅无线V3.0</title>
+    <link rel="apple-touch-icon-precomposed" href="custom_icon.png">
+    <!-- nirvana -->
+    <link rel="stylesheet" href="../dist/css/nirvana.css" media="all"> <!-- 公用库 -->
+
+  </head>
+  <body>
+    <!-- nav tab S -->
+    <header class="">
+
+      <ul class="tab tab-primary tab-nav">
+          <li class="cur">国内</li>
+          <li>国际</li>
+      </ul>    
+      <span class="nav-back"> <i class="icon-back"></i> </span>
+
+      <div class="top-container top-search">
+          <div class="search search-mulit">  
+            <input class="search-input" type="text" value="请输入用户人姓名" />  <!-- foucus触发时需要将value清空 -->
+            
+            <span class="btn-search-delete"></span>
+          </div>
+      </div>
+    </header>
+    <!-- nav tab E -->
+    
+    <!-- page slide container S -->
+    <section class="main">
+      <!-- single page -->
+      <article class="page" id="wrapper">
+        <div class="container">
+            
+            <div class="mod-address">
+                <dl>
+                  <dt id="addrTitle"> 历史  <i class="arr arr-r"></i> </dt> <!-- 箭头旋转 添加 arr-rt -->
+                  <dd  id="addrList" style="height: 0px; "> <!-- height: 45px*linum -->
+                    <!-- repeat -->
+                     <ul class="address-list">
+                       <li> <span>北京</span></li>
+                       <li> <span>上海</span></li>
+                       <li> <span>广州</span></li>
+                     </ul>
+                     <!-- repeat -->
+                     <ul class="address-list">
+                       <li> <span>北京北京北京北京</span></li>
+                       <li> <span>上海上海上海上海上海上海</span></li>
+                       <li> <span class="txt-ellipsis">广州广州广州广州广州广州广州</span></li>
+                     </ul>
+                  </dd>
+                  <dt> 热门 <i class="arr arr-r"></i> </dt>
+                  <dt> 热门 <i class="arr arr-r"></i> </dt>
+                  <dt> A <i class="arr arr-r"></i> </dt>
+                  <dt> B <i class="arr arr-r"></i> </dt>
+                  <dt> C <i class="arr arr-r"></i> </dt>
+                  <dt> D <i class="arr arr-r"></i> </dt>
+                </dl> 
+
+                <dl>
+                  <dd class="smart-list">
+                    <!-- repeat -->
+                     <ul class="address-list">
+                       <li> <span><b>北</b>京</span></li>
+                       <li> <span><b>北</b>上海</span></li>
+                       <li> <span class="txt-ellipsis"><b>北</b>广州广州广州广州广州广州广州广州广州广州广州广州广州广州广州广州广州广州广州广</span></li>
+                     </ul>
+                     <!-- repeat -->
+                     <ul class="address-list">
+                       <li> <span><b>北</b>北京</span></li>
+                       <li> <span><b>北</b>上海</span></li>
+                       <li> <span><b>北</b>广州</span></li>
+                     </ul>
+                  </dd>
+                </dl>
+            </div>
+            
+            <div class="mod-noresult">
+              
+            </div>
+        </div>
+         
+      </article>
+    </section>
+    <!-- page slide container E -->
+
+    <!-- framework -->
+    <script type="text/javascript" src="../js/frame.min.js"></script>
+    <script text="text/javascript">
+        //get window height
+        //$("body").height($(window).height());
+
+        // page iscroll        
+        var myScroll;
+        function loaded() {
+          myScroll = new iScroll('wrapper');
+        }
+        document.addEventListener('DOMContentLoaded', loaded, false);
+
+        $('#addrTitle').click(function(){
+          $('#addrTitle > .arr').addClass('arr-rt');
+          $('#addrList').css("height","270px");
+        })
+
+    </script>
+    <!-- project script -->
+    <script type="text/javascript" src="../js/demo.js"></script>
+  </body>
+</html> 

@@ -1,0 +1,66 @@
+@charset "utf-8";
+//-----------------------------------------------------
+// reset scss
+//-----------------------------------------------------
+
+/* broswer reset */
+body, h1, h2, h3, h4, dl, dt, dd, ul, ol, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+button, input, img, select {
+  vertical-align: middle;
+  border: none;
+  margin: 0;
+  outline: none;
+}
+
+a {
+  color: #3372d6;
+  text-decoration: none;
+  &:active {
+    color: #FF7E01;
+    -webkit-tap-highlight-color: #c8c8c8;
+  }
+}
+
+// 1. Set default font family to sans-serif.
+// 2. Prevent iOS text size adjust after orientation change, without disabling
+//    user zoom.
+
+body {
+  min-width: 320px;
+  color: #333;
+  font:normal 14px/1.5 Arial, "Lucida Grande", Verdana, "Microsoft Yahei",STXihei,Sans-serif;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+       -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none; /* 2 */
+        -ms-text-size-adjust: none; /* 1 */
+         -webkit-user-select: none;
+             -ms-user-select: none;  
+}
+
+select {  
+  background-color: transparent;
+  -webkit-appearance: none;
+
+  &::-ms-expand { // fix ie10
+    display: none;
+  }
+}
+
+
+

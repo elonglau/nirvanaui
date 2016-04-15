@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>form - 携程商旅无线V3.0</title>
+    <link rel="apple-touch-icon-precomposed" href="custom_icon.png">
+    <!-- nirvana -->
+    <link rel="stylesheet" href="../dist/css/nirvana.css" media="all"> <!-- 公用库 -->
+
+  </head>
+  <body>
+    <header>
+      <h1><span>携程企业商旅</span></h1>      
+      <span class="nav-back"> <i class="icon-back"></i> </span>
+      <span class="nav-home"> <i class="icon-home"></i> </span>
+    </header>
+    
+    <!-- page slide container S -->
+    <section class="main">
+      <!-- single page -->
+      <article class="page" id="wrapper" style="">
+         <div class="container">
+            
+            <!-- 标题表单混合 -->
+            <div class="figure">
+                <h3 class="figure-caption">标题表单混合标题</h3>
+                <div class="grid">
+                   <div class="col-12"> <label>表单标题</label>  <i class="arr arr-r"></i> </div>
+                </div>
+                <div class="help-tips"> 提示帮助提示帮助提示帮助提示帮助提示帮助 </div>
+            </div>
+
+            <div class="figure">
+                <h3 class="figure-caption">两列标题表单混合标题1:2</h3>
+                <div class="figure-content">
+                    <div class="grid">
+                       <div class="col-4"> <label>表单标题六字</label> </div>
+                       <div class="col-8"> <span class="txt-figure">表单内容啊啊啊</span> </div>
+                    </div>
+                    <div class="grid">
+                       <div class="col-4"> <label>表单标题六字</label> </div>
+                       <div class="col-8"> 
+                          <span class="txt-figure txt-figure-center">表单内容啊啊啊</span>  
+                          <span class="txt-figure-right">中文描述</span>  
+                          <i class="arr arr-r"></i> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="help-tips"> 提示帮助提示帮助提示帮助提示帮助提示帮助 </div>
+            </div>
+            
+            <!-- 一列布局 -->
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-12"> <label>单行表单标题</label> <span class="txt-figure-right">中文描述</span>  <i class="arr arr-r"></i> </div>
+                </div>
+            </div> 
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-12"> <label>单行表单标题</label> <span class="txt-figure-right"> 共<span class="base-price price-sm"><dfn>&yen;</dfn> <b>265</b></span> </span> <i class="arr arr-r"></i> </div>
+                </div>
+            </div>
+            <!-- 两列布局 含表单元素 -->
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-4"> <label>单行表单标题</label></div>
+                  <div class="col-8"> 
+                      <input class="inner-control" type="text" value="不可编辑" placeholder="" readonly /> <!-- 只读状态添加readonly -->
+                  </div>
+                </div>
+            </div> 
+            <div class="figure">
+                <div class="grid">
+                  <div class="col-4"> <label>单行表单标题</label></div>
+                  <div class="col-8"> 
+                      <input class="inner-control" type="text" value="" placeholder="please input your text..." />
+                  </div>
+                </div>
+            </div>  
+            <div class="figure">
+                <div class="grid  row-select"> <!-- 模拟select -->
+                  <div class="col-4"> <label>单行表单标题</label></div>
+                  <div class="col-8"> 
+                      <span class="inner-control"> 模拟选择 </span>
+                      <i class="arr arr-r"></i>
+                  </div>
+                  <select class="">
+                      <option value="">select content</option>
+                      <option value="">select content</option>
+                      <option value="">select content</option>
+                      <option value="">select content</option>
+                  </select>
+                </div>
+            </div>
+            <!-- 乘机人模块 S -->
+            <div class="figure">
+              <div class="grid figure-passenger-title">
+                <div class="col-12"><label>乘机人</label> </div>
+              </div>
+
+              <div class="figure-content figure-passenger" style="height: 89px;">
+                <div class="grid">
+                  <div class="col-4">乘客一</div>
+                  <div class="col-8"><span class="txt-figure txt-figure-center">护照 <br/>1234567897784444 </span>  <i class="arr arr-r"></i></div>
+                </div>
+                <div class="grid">
+                  <div class="col-4">乘客二</div>
+                  <div class="col-8"><span class="txt-figure txt-figure-center">护照 <br/>1234567897784444 </span>  <i class="arr arr-r"></i></div>
+                </div>
+              </div>
+
+              <div class="grid">
+                <div class="col-12"> 
+                    <label>单行表单标题</label>
+                    <span class="txt-figure-right">中文描述</span>
+                    <i class="arr arr-r"></i>
+                </div>
+              </div>
+            </div>
+            <!-- 乘机人模块 E -->
+         </div>
+      </article>
+
+    </section>
+    <!-- page slide container E -->
+    <footer> fixed footer content </footer>
+
+    <!-- framework -->
+    <script type="text/javascript" src="../js/frame.min.js"></script>
+    <script text="text/javascript">
+        //get window height
+        //$("body").height($(window).height());
+
+        // page iscroll        
+        var myScroll;
+        function loaded() {
+          myScroll = new iScroll('wrapper');
+        }
+        document.addEventListener('DOMContentLoaded', loaded, false);
+
+    </script>
+    <!-- project script -->
+    <script type="text/javascript" src="../js/demo.js"></script>
+  </body>
+</html> 

@@ -1,0 +1,151 @@
+@charset "utf-8";
+//-----------------------------------------------------
+// buttons scss
+//-----------------------------------------------------
+
+/* button */
+@mixin btn-color($btn-border-colors , $btn-bgcolor-colors , $btn-font-colors) { //控制按钮颜色
+	color:             $btn-font-colors;
+	border-color:      $btn-border-colors;
+	background-color:  $btn-bgcolor-colors;
+
+	&:active{
+		background-color: lighten($btn-bgcolor-colors , 10%);
+	}
+}
+@mixin btn-size($btn-size , $btn-hight){  //控制按钮字体及高度
+	height:     $btn-hight;
+	font-size:  $btn-size;	
+}
+@mixin btn-layout($btn-padding-vertical , $btn-padding-horizontal){ //控制内边距
+	padding: $btn-padding-vertical $btn-padding-horizontal;
+}
+
+%button{ //基础样式
+	display: inline-block;
+	text-align: center;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: $base-btn-radius;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	&:active{
+		outline: 0;
+	}
+}
+
+// 尺寸大小
+.btn-lg{ //块级大按钮
+	display: block;
+	width: 100%;
+	@include btn-size(20px , 44px);
+}
+.btn-md{ //块级中型按钮
+	display: block;
+	width: 50%;
+	@include btn-size(20px , 44px);
+}
+.btn-sm{ //小按钮
+	width: 80px;
+	border-radius: $base-border-radius;
+	@include btn-size(12px , 30px);	
+}
+.btn-xs{ //超小按钮
+	width: 34px;
+	padding: 0;
+	font-weight: bold;
+	@include btn-size(18px , 34px);
+}
+
+// 颜色与样式
+.btn-default{ //灰色按钮
+	@include btn-color($btn-border-colors: #9C9C9C , $btn-bgcolor-colors: #F0F0F0, $btn-font-colors: $font-color-gray);
+}
+.btn-primary{ //黄色主按钮
+	@extend %button;
+	@include btn-color($btn-border-colors: $btn-border-yellow , $btn-bgcolor-colors: $btn-bg-yellow , $btn-font-colors: $base-color-white);
+}
+.btn-secondary{ //蓝色次级按钮
+	@extend %button;
+	@include btn-color($btn-border-colors: $btn-border-blue, $btn-bgcolor-colors: $btn-bg-blue , $btn-font-colors: $base-color-white);
+}
+.btn-simple{ //简约按钮
+	@extend %button;
+	@include btn-color($btn-border-colors: $btn-border-blue, $btn-bgcolor-colors: $base-color-white , $btn-font-colors: $base-color-blue);
+}
+
+.btn-disable{ //不可用状态样式，[disabled]只控制不可点击
+	color:             $font-color-light;
+	border-color:      $btn-border-disable;
+	background-color:  $btn-bg-disable;
+
+	&:active{
+		border-color:      $btn-border-disable;
+		background-color:  $btn-bg-disable;
+	}
+}
+
+/* toggle button */
+.toggle input.checked + label:after{right:-1px;left:auto;}
+
+.toggle {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	border: 1px solid #E5E5E5;
+	background-color: $base-color-white;
+	@include border-radius(30px);
+
+	label {
+		position:absolute;
+		top: 0px;
+		left: 0px;
+		display: inline-block;
+		content: "";
+		width: 28px;
+		height: 28px;
+		border: 1px solid rgba(0,0,0,.1);
+		background-color: $base-color-white;
+		@include border-radius(28px);	
+		@include box-shadow(0 0 15px rgba(0,0,0,.05), 0 5px 2px rgba(0,0,1,.05));
+	}
+	
+	&.on {
+		border-color: #4089e8;
+		background-color: #4089e8;
+
+		label{
+			left: 30px;
+		}
+	}
+}
+
+// button close X ------------------------------customer button styles
+.btn-x {
+	display: inline-block;
+	width: 42px;
+	height: 42px;
+	background: url(../../images/icon_x_blue.png) center no-repeat;
+	background-size: 16px 16px;
+}
+
+.btn-search-delete,
+.btn-search-enter {
+	display: inline-block;
+	width: 44px;
+	height: 44px;	
+}
+.btn-search-delete {
+	background: url(../../images/icon_search_delete.png) center no-repeat;
+	background-size: 20px 20px;
+}
+.btn-search-enter {
+	background: url(../../images/icon_search_enter.png) center no-repeat;
+	background-size: 17px 17px;
+}
+
+// button container layout
+.button-panel {
+	padding: $layout-base-gap;
+}

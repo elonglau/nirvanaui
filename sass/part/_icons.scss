@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+//-----------------------------------------------------
+// icons scss
+//-----------------------------------------------------
+//$icon-hotel-spacing: 5px;  //sprite自定义变量必须放在载入图片之前
+//@import "compass/utilities/sprites";
+//@import "icon-shotel/*.png";
+//@import "icon-lhotel/*.png";
+
+// icon common
+[class*="icon"] {
+	display: inline-block;
+  color: $base-color-white;
+
+   + [class*="icon"] {
+    margin-left: 5px;
+  }
+}
+
+.icon-label1, .icon-label2, .icon-label3, .icon-label4 {
+  padding: 1px;
+  font-size: 10px;
+  line-height: 1;
+  border-width: 1px;
+  border-style: solid;
+  overflow: hidden;
+}
+.icon-label1 {
+  background-color: $icon-bg-orange;
+}
+.icon-label2 {
+  color: #fd8424;
+  border-color: $icon-bg-orange;
+  background-color: $base-color-white;
+}
+.icon-label3 {
+  padding: 2px 5px;
+  border-color: #5192d2;
+  background-color: $icon-bg-blue;
+  @include border-radius(16px);
+}
+.icon-label4 {
+  padding: 0px;
+  border-color: $icon-bg-orange;
+  background-color: $icon-bg-orange;
+  b {
+    padding: 0 2px;
+    line-height: 1;
+    color: #fd8424;
+    font-weight: normal;    
+    background-color: $base-color-white;
+  }
+}
+
+// ----------------------------------- back&home
+header{
+  .icon-back,.icon-home {
+    position: absolute;
+  }
+
+  .icon-back {
+    left: 10px;
+  }
+  .icon-home {
+    right: 10px;
+  }
+}
+
+.icon-back,.icon-home {
+  width: 40px;
+  height: 40px;
+  text-align: left;
+
+  &:before,&:after {
+    position:absolute; content:"\20"; 
+  }
+}
+.icon-back:before {
+  width: 14px; 
+  height: 14px; 
+  margin: 12px 0 0 12px; 
+  border-left: 2px solid #FFF; 
+  border-bottom: 2px solid #FFF;  
+  
+  @include transform(45deg);
+}
+
+.icon-home:before {
+  width: 17px; 
+  height: 17px; 
+  margin: 12px 0 0 14px; 
+  border-left: 2px solid #FFF; 
+  border-top: 2px solid #FFF;   
+  
+  @include transform(45deg);
+}
+.icon-home:after {
+  width: 14px; 
+  height: 8px; 
+  margin: 22px 0 0 14px; 
+  border: 2px solid #FFF; 
+  border-top: none; 
+  @include border-radius(3px);
+  @include box-shadow(0 1px 1px #CCCCCC);
+}
+
+//--------------------------------------- arr
+.arr,.arrblue {
+  display: inline-block;
+  width: $base-arr-size;
+  height: $base-arr-size;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  @include transform(45deg);
+  @include transition(300ms ease-in .1s);
+}
+.arr {border-color: #939393;}
+.arrblue {border-color: #5679C2;}
+.arr-r {right: 15px;}
+.arr-rt {@include transform(135deg)}
+
+// icon-qa
+.icon-qa {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 18px;
+  background: #77acf1;
+  border: 2px solid #FFFFFF;
+  @include border-radius(20px);
+  @include box-shadow(0 0 2px #aaaaaa);
+
+  &:before {
+    content: "?";
+  }
+}
+.icon-qa-up:before {
+  content: "\20";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border: 2px solid #FFFFFF;
+  border-width: 2px 0 0 2px;  
+  @include transform(45deg);
+}
+
+// icon-warning
+.icon-warning{
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 14px;
+  background: #77acf1;  
+  @include border-radius(16px);
+
+  &:before {
+    content: "!";
+  }
+}
+
+// icon-num
+.icon-num{
+  width: 16px;
+  height: 16px;
+  color: #FFF;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: #DC4C4C;
+  border: 2px solid #FFF;  
+  @include border-radius(16px);
+  @include box-shadow(1px 1px 2px #999);
+}
+
+// icon-delete
+.icon-delete{
+  width: 18px;
+  height: 18px;
+  background-color: #DC4C4C;
+  font-size: 24px;
+  text-align: center;
+  line-height: 16px;
+  color: #FFF;
+  @include border-radius(18px);
+}
+
+// icon-search
+.icon-search {
+  width: 28px;
+  height: 28px;
+  background-image: url(../../images/icon_search.png?20140307);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+}
+
+/* hotel small icon sprites */
+//@include all-icon-shotel-sprites($icon-hotel-spacing);
+/* hotel large icon sprites */
+//@include all-icon-lhotel-sprites($icon-hotel-spacing);
+
+//------------------------------------------- icon hotel graphics 
+.icon-shotel-park-wh, .icon-shotel-park, .icon-shotel-wifi-wh, .icon-shotel-wifi {width: 16px; height: 16px; background: url('/images/graphic-hotel-small.png') no-repeat; background-size: 16px 64px;}
+.icon-lhotel-break, .icon-lhotel-bus, .icon-lhotel-fitness, .icon-lhotel-food, .icon-lhotel-meet, .icon-lhotel-net, .icon-lhotel-park, .icon-lhotel-pc, .icon-lhotel-pickup, .icon-lhotel-pool, .icon-lhotel-spa, .icon-lhotel-wifi {width: 24px; height: 24px; background: url('/images/graphic-hotel-large.png') no-repeat; background-size: 24px 288px; }
+/* hotel small icon sprites */
+.icon-shotel-park-wh { background-position: 0 -16px;}
+.icon-shotel-park { background-position: 0 0;}
+.icon-shotel-wifi-wh { background-position: 0 -48px;}
+.icon-shotel-wifi { background-position: 0 -32px;}
+
+/* hotel large icon sprites */
+.icon-lhotel-break { background-position: 0 -192px; }
+.icon-lhotel-bus { background-position: 0 -216px; }
+.icon-lhotel-fitness { background-position: 0 -48px; }
+.icon-lhotel-food { background-position: 0 -72px; }
+.icon-lhotel-meet { background-position: 0 -24px; }
+.icon-lhotel-net { background-position: 0 -240px; }
+.icon-lhotel-park { background-position: 0 0; }
+.icon-lhotel-pc { background-position: 0 -264px; }
+.icon-lhotel-pickup { background-position: 0 -144px; }
+.icon-lhotel-pool { background-position: 0 -120px; }
+.icon-lhotel-spa { background-position: 0 -168px; }
+.icon-lhotel-wifi { background-position: 0 -96px; }
+
+//------------------------------------------- icon flight graphics
+.icon-flt-graphic01 , 
+.icon-flt-graphic02 , 
+.icon-flt-graphic03 ,
+.icon-flt-graphic04 ,
+.icon-flt-graphic05 ,
+.icon-flt-graphic06 ,
+.icon-flt-graphic07 ,
+.icon-flt-graphic08 ,
+.icon-flt-graphic09 , {
+    width: 16px;
+    height: 16px;
+    background-image: url(../../images/graphics-flight.png?20140313);
+    background-repeat: no-repeat;
+    background-size: 20px 150px;
+}
+
+.icon-flt-graphic01 {
+  background-position: 0 4px;
+}
+.icon-flt-graphic02 {
+  background-position: 0 -9px;
+}
+.icon-flt-graphic03 {
+  background-position: 0 -23px;
+}
+.icon-flt-graphic04 {
+  background-position: 0 -39px;
+}
+.icon-flt-graphic05 {
+  background-position: 0 -55px;
+}
+.icon-flt-graphic06 {
+  width: 18px;
+  background-position: 0 -70px;
+}
+.icon-flt-graphic07 {
+  width: 18px;
+  background-position: 0 -83px;
+}
+.icon-flt-graphic08 {
+  background-position: 0 -100px;
+}
+.icon-flt-graphic09 {
+  background-position: 0 -114px;
+}

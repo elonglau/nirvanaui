@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+//-----------------------------------------------------
+// grid scss 12 colum modal
+//-----------------------------------------------------
+
+/* grid system */
+.grid {
+  width: 100%;
+  @extend %box;
+
+    [class*="col"] {
+      position: relative;
+      height: 44px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      line-height: 24px;
+      background-color: #FFF;
+      @extend %boxcontent;
+
+      @if $demo {
+        border: 1px solid $grid-border-color;
+        
+      }
+   }
+    .col-1 {                              // width of single grid for 12 columns
+      width: $grid-columns-width;
+    }
+    .col-3 {                              // width of 3x grid for 4 columns
+      width: $grid-columns-width * 3;
+    }
+    .col-4 {                              // width of 4x grid for 3 columns
+      width: $grid-columns-width * 4;
+    }
+    .col-6 {                              // width of 6x grid for 2 columns
+      width: $grid-columns-width * 6;
+    }
+    .col-8 {                              // width of 8x grid for 2/3 columns
+      width: $grid-columns-width * 8;
+    }
+    .col-12 {                             // width of full grid for 1 columns
+      width: $grid-columns-width * 12;
+    }
+
+    .arr { // arr align middle
+      position: absolute;
+      top: 50%;
+      margin-top: -5px;
+    }
+
+    + .grid {
+      border-top: none!important;
+    }
+
+    label {
+      color: $font-color-gray;
+    }
+
+}
+
+/* grid extend layout */
+.figure {
+    margin-bottom: $layout-base-gap; 
+
+    .figure-caption, [class*="help"], label {
+      padding-left: $layout-base-gap * 1.5;
+   }
+
+    .grid {
+      border-top: 1px solid $grid-border-color;
+      border-bottom: 1px solid $grid-border-color;
+    }
+
+    @if $demo {
+      [class*="col"] {
+        border: none;
+      }
+    }
+}
+
+// form element right side
+.txt-figure-right {
+    position: absolute;
+    right: 40px;
+    display: inline-block;
+    min-width: 50px;
+    height: 24px;
+    text-align: right;
+}
+
+// ---------------------------------grid for passenger
+.figure-passenger {
+  overflow:hidden;
+
+  .grid {
+    position: relative;
+    border-top: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+
+    &::before { // 左端覆盖空白线
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      display: block;
+      width: 15px;
+      height: 1px;
+      background-color: $base-bg-color;
+      content: "";
+    }
+  }
+
+  [class*="col"] {
+    background-color: transparent;
+  }
+
+  .txt-figure-center {
+    display: inline-block;
+    height: 24px;
+    font-size: $font-size-sm;
+    line-height: 1;
+  }
+}

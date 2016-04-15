@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+//-----------------------------------------------------
+// mixin scss
+//-----------------------------------------------------
+
+// Transitions
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+          transition: $transition;
+}
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: $transition-delay;
+          transition-delay: $transition-delay;
+}
+@mixin transition-duration($transition-duration) {
+  -webkit-transition-duration: $transition-duration;
+          transition-duration: $transition-duration;
+}
+@mixin transition-transform($transition) {
+  -webkit-transition: -webkit-transform $transition;
+          transition: transform $transition;
+}
+// transform
+@mixin transform($rotate-deg){
+  -webkit-transform: rotateZ($rotate-deg);
+  -ms-transform: rotateZ($rotate-deg);
+}
+
+// shadows
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+// border radius
+@mixin border-radius($border-radius){
+  -webkit-border-radius: $border-radius;
+          border-radius: $border-radius;
+}
+
+//background gradient
+@mixin linear-gradient($color-stop...) {
+  background-image: -webkit-linear-gradient($color-stop...);
+  background-image:         linear-gradient($color-stop...);
+}
+
+// flexbox num
+@mixin flexbox($flexbox){
+  -webkit-box-flex: $flexbox;
+       -ms-flexbox: $flexbox;
+}
+
+//----------------------  extend  -----------------------
+// clearfix 
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+// box modal
+%box{
+  display: -webkit-box;
+  display: -ms-flexbox;
+}
+
+// box content
+%boxcontent {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}

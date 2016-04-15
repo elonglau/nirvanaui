@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+//-----------------------------------------------------
+// calendar scss
+//-----------------------------------------------------
+
+.mod-calendar {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.calendar-month {
+  height: 24px;
+  padding: 10px;
+  color: $base-color-white;
+  background-color: rgba(255,255,255,.4);
+
+  em {
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+
+.calendar-day {
+  margin-bottom: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  font-size: 16px;
+
+  thead {
+    height: 30px;
+    line-height: 30px;
+    color: $base-color-white;
+  }
+  tbody td {
+    height: 44px;
+    line-height: 44px;
+
+    a {
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      line-height: 42px;
+      color: $base-color-white;
+      border-style: solid;
+      border-width: 1px;
+      border-color: transparent;    
+
+      @include border-radius(44px);  
+    }
+  }
+  .sel {
+    border-color: $base-color-white;  
+
+    &:active { 
+      background-color: rgba(255,255,255,.4);
+    }
+
+  }
+  .today {
+    font-size: 18px;
+  }
+  .return {
+    background-color: #BEAF45;
+  }
+}
+

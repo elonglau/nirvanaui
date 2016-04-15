@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>frame page - 携程商旅无线V3.0</title>
+    <link rel="apple-touch-icon-precomposed" href="custom_icon.png">
+    <!-- nirvana -->
+    <link rel="stylesheet" href="../dist/css/nirvana.css" media="all"> <!-- 公用库 -->
+
+  </head>
+  <body>
+    <header>
+      <h1><span>携程企业商旅</span></h1>      
+      <span class="nav-back"> <i class="icon-back"></i> </span>
+      <span class="nav-home"> <i class="icon-home"></i> </span>
+    </header>
+    
+    <!-- page slide container S -->
+    <section class="main">
+      <!-- single page -->
+      <article class="page" id="wrapper">
+         <div class="container">
+            main flied content
+         </div>
+      </article>
+    </section>
+    <!-- page slide container E -->
+    
+    <footer> fixed footer content </footer>
+    <!-- framework -->
+    <script type="text/javascript" src="../js/frame.min.js"></script>
+    <script text="text/javascript">
+        //get window height
+        //$("body").height($(window).height());
+
+        // page iscroll        
+        var myScroll;
+        function loaded() {
+          myScroll = new iScroll('wrapper');
+        }
+        document.addEventListener('DOMContentLoaded', loaded, false);
+
+    </script>
+    <!-- project script -->
+    <script type="text/javascript" src="../js/demo.js"></script>
+  </body>
+</html> 

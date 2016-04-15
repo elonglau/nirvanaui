@@ -1,0 +1,59 @@
+@charset "utf-8";
+//-----------------------------------------------------
+// setting for all scss
+//-----------------------------------------------------
+
+// 开关设置
+//-----------------------------------------------------	
+$demo:                    true !default; //是否演示属性
+
+
+// common attr
+$base-color-white:     #FFF;
+$base-color-blue:      #2181f7;
+$base-color-orange:    #FF6600;
+$base-color-yellow:    #fc6621;
+$base-bg-color:        #F1F1F1;
+$base-bg-blue:         #3e74b9;
+
+$font-size-sm:         12px;
+$font-size-normal:     14px;
+$font-size-lg:         16px;
+$font-size-xl:         18px;
+$font-color-normal:    #333;
+$font-color-gray:      #666;
+$font-color-light:     #999;
+$font-color-blue:      #2181f7;
+
+// form input 
+$base-border-corlor:   #cdcdcd;
+$base-border-radius:   5px;
+
+// layout
+$nav-height:           40px; //navgation header height
+$layout-base-gap:      10px;  //padding margin
+
+// icon
+$icon-bg-blue:         #5aa3ea;
+$icon-bg-orange:       #fc8b12;
+$base-arr-size:        10px;  //form arr width
+
+// grid
+$grid-columns:         12;  //total numbers of columns
+$grid-columns-width:   100% / 12; //single grid width
+$grid-border-color:    #D7D7D7;
+$gutter:               0px;   //columns gutter width
+
+// buttons
+$btn-border-yellow:    #ff9710;
+$btn-border-blue:      #3e74b9;
+$btn-border-disable:   #D4D4D4;
+$btn-bg-yellow:        #ffbc06;
+$btn-bg-blue:          #4089e8;
+$btn-bg-disable:       #E7E7E7;
+$btn-color-gray:       #ececec;
+$btn-color-blue:       #ececec;
+$base-btn-radius:      3px;
+
+
+

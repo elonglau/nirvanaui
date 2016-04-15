@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>slider-4</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href="slider_4.css?v=112" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>HEADER </header>
+  
+    <section>
+      <!-- view container -->
+      <ul id="pages" class="view-container" style="">
+        <!-- pageA container -->
+        <li id="pageA" class="page-container pageInt" style="display:;"> <b id="btnNext1" class="page-num">A</b> </li>
+        <!-- pageB container -->
+        <li id="pageB" class="page-container pageNew" style="display:;"> <b id="btnNext2" class="page-num">B</b></li>
+        <!-- pageC container -->
+        <li id="pageC" class="page-container pageNew" style="display:;"> <b id="pageBack" class="page-num">C</b></li>
+      </ul>
+    
+    </section>
+    
+    <footer>FOOTER</footer>
+
+  <!-- framework -->
+  <script type="text/javascript" src="../js/frame.min.js"></script>
+  <script>
+        var screenW = $('body').width();
+
+        var btnNext1 = $('#btnNext1');
+        var btnNext2 = $('#btnNext2');
+        var pageBack = $('#pageBack');
+        var pages = $('#pages');
+        var pageA = $('#pageA');
+        var pageB = $('#pageB');
+        var pageC = $('#pageC');
+
+        //.slideSlow 慢速滑动，一定是左边的页面
+        //.slideFast 快速滑动，一定是右边的页面
+        //.slideSlowBack 返回时，慢速滑动，一定是左边的页面
+        //.slideFastBack 返回时，快速滑动，一定是右边的页面
+        //.pageInt  初始页面位置
+        //.pageOld  正向划过页面位置 -100%
+        //.pageNew  正向未滑页面位置 +100%
+
+        btnNext1.click(function(){
+            pageA.css({'-webkit-transform' : 'translate3d(-100%, 0px, 0px)' , '-webkit-transition' : '-webkit-transform 400ms cubic-bezier(0.42, 0, 0.58, 1.0) 0.1s'});
+            pageB.css({'-webkit-transform' : 'translate3d(0%, 0px, 0px)' , '-webkit-transition' : '-webkit-transform 350ms cubic-bezier(0.42, 0, 0.58, 1.0)'});
+        });
+
+        btnNext2.click(function(){
+            pageB.css({'-webkit-transform' : 'translate3d(-100%, 0px, 0px)' , '-webkit-transition' : '-webkit-transform 400ms cubic-bezier(0.42, 0, 0.58, 1.0) 0.1s'});
+            pageC.css({'-webkit-transform' : 'translate3d(0%, 0px, 0px)' , '-webkit-transition' : '-webkit-transform 350ms cubic-bezier(0.42, 0, 0.58, 1.0)'});
+        });
+        pageBack.click(function(){
+            pageB.css({'-webkit-transform' : 'translate3d(0%, 0px, 0px)' , '-webkit-transition' : '-webkit-transform 400ms cubic-bezier(0.42, 0, 0.58, 1.0)'});
+            pageC.css({'-webkit-transform' : 'translate3d(100%, 0px, 0px)' , '-webkit-transition' : '-webkit-transform 350ms cubic-bezier(0.42, 0, 0.58, 1.0) 0.1s'});
+        });
+  </script>
+</body>
+</html>

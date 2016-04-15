@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+//-----------------------------------------------------
+// bubbles scss popup window / toast
+//-----------------------------------------------------
+
+.mod-popup {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  width: 270px;
+  margin: -75px 0 0 -135px;
+  border: 1px solid $grid-border-color;
+  background-color: $base-color-white;
+  @include border-radius($base-border-radius);
+
+  .mod-popup-content {
+    min-height: 40px;
+    padding: 20px 10px;
+    font-size: 16px;
+  }
+
+  .mod-popup-button {
+    @extend %box;
+    border-top: 1px solid $grid-border-color;
+  }
+}
+
+.mod-popup-button {
+  .btn-pop {
+    display: block;
+    height: 44px;
+    color: $font-color-blue;
+    text-align: center;
+    line-height: 44px;
+    font-size: 16px;
+
+    @include flexbox(1);
+    @extend %boxcontent;
+  }
+
+  .btn-pop:first-child {
+    border-right: 1px solid $grid-border-color;
+  }
+  .btn-pop:only-of-type {
+    border: none;
+  }
+} 
+
+// toast of tips
+.toast {
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  left: 50%;
+  width: 130px;
+  margin-left: -75px;
+  padding: 10px;
+  color: $base-color-white;
+  text-align: center;
+  background-color: rgba(0,0,0,.6);
+  opacity: 0;
+  
+  @include border-radius(5px);
+}

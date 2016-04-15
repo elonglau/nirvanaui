@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>slider-3</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href="slider_3.css?v=112" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="x-body">
+    <header>HEADER </header>
+  
+    <section>
+      <!-- view container -->
+      <ul id="pages" class="view-container" style="">
+        <!-- pageA container -->
+        <li id="pageA" class="page-container"style="display:block;"> <b id="btnNext1" class="page-num">A</b> </li>
+        <!-- pageB container -->
+        <li id="pageB" class="page-container" style="display:none;"> <b id="btnNext2" class="page-num">B</b></li>
+        <!-- pageC container -->
+        <li id="pageC" class="page-container" style="display:none;"> <b id="pageBack" class="page-num">C</b></li>
+      </ul>
+    
+    </section>
+    
+    <footer>FOOTER</footer>
+  </div>
+
+  <!-- framework -->
+  <script type="text/javascript" src="../js/frame.min.js"></script>
+  <script>
+        var screenW = $('body').width();
+
+        var btnNext1 = $('#btnNext1');
+        var btnNext2 = $('#btnNext2');
+        var pageBack = $('#pageBack');
+        var pages = $('#pages');
+        var pageA = $('#pageA');
+        var pageB = $('#pageB');
+        var pageC = $('#pageC');
+
+        btnNext1.click(function(){
+            //滑动发生前先将后一个页面初始化到相应位置空间
+            pageB.css({'display' : 'block' , '-webkit-transform' : 'translateX(100%)'});
+
+            //同步滑动
+            setTimeout(function(){ 
+              pageB.css({'-webkit-transform' : 'translateX(0)' , '-webkit-transition' : '-webkit-transform 250ms ease-out 0ms'});
+              pageA.css({'-webkit-transform' : 'translateX(-100%)' , '-webkit-transition' : '-webkit-transform 250ms ease-out 0ms'});
+            }, 0); 
+
+            //滑动发生后重置样式
+            setTimeout(function(){ 
+              pageB.css({'-webkit-transform' : '' , '-webkit-transition' : ''});
+              pageA.css({'display' : 'none' , '-webkit-transform' : '' , '-webkit-transition' : ''});
+            }, 350);          
+        });
+
+        btnNext2.click(function(){
+            //滑动发生前先将后一个页面初始化到相应位置空间
+            pageC.css({'display' : 'block' , '-webkit-transform' : 'translateX(100%)'});
+
+            //同步滑动
+            setTimeout(function(){ 
+              pageC.css({'-webkit-transform' : 'translateX(0)' , '-webkit-transition' : '-webkit-transform 250ms ease-out 0ms'});
+              pageB.css({'-webkit-transform' : 'translateX(-100%)' , '-webkit-transition' : '-webkit-transform 250ms ease-out 0ms'});
+            }, 0); 
+
+            //滑动发生后重置样式
+            setTimeout(function(){ 
+              pageC.css({'-webkit-transform' : '' , '-webkit-transition' : ''});
+              pageB.css({'display' : 'none' , '-webkit-transform' : '' , '-webkit-transition' : ''});
+            }, 350);   
+        });
+        pageBack.click(function(){
+            //滑动发生前先将后一个页面初始化到相应位置空间
+            pageB.css({'display' : 'block' , '-webkit-transform' : 'translateX(-100%)'});
+
+            //同步滑动
+            setTimeout(function(){ 
+              pageB.css({'-webkit-transform' : 'translateX(0)' , '-webkit-transition' : '-webkit-transform 250ms ease-out 0ms'});
+              pageC.css({'-webkit-transform' : 'translateX(100%)' , '-webkit-transition' : '-webkit-transform 250ms ease-out 0ms'});
+            }, 0); 
+
+            //滑动发生后重置样式
+            setTimeout(function(){ 
+              pageB.css({'-webkit-transform' : '' , '-webkit-transition' : ''});
+              pageC.css({'display' : 'none' , '-webkit-transform' : '' , '-webkit-transition' : ''});
+            }, 350); 
+        });
+  </script>
+</body>
+</html>
